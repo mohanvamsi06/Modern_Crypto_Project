@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link href="../css/application.css" rel="stylesheet">
+    <title>Application | Paillier Cryptosystem</title>
+
+</head>
+<body>
+    <div class="navbar">
+        <h1>Paillier Cryptosystem</h1>
+        <ul class="nav-links">
+            <li><a href="#"><b>Projects</b></a></li>
+            <li><a href="#"><b>Case Studies</b></a></li>
+            <li><a href="#"><b>About</b></a></li>
+            <li class="feedback-button"><a href="#"><b>FEEDBACK.</b></a></li>
+        </ul>
+    </div>
+    <div class="rectangle-bar"></div>
+    <div class="section1">
+        <label for="reg1">Enter number of words in region 1:</label>
+        <input type="number" id="reg1" min="0"><br><br>
+        <button id="enc1" style="font-size: 1vw;">Encrypt</button>
+        <div id="encryptionOutput1"></div><br><br><br><br><br><br><br>
+    </div>
+    <div class="section2">
+        <label for="reg2">Enter number of words in region 2:</label>
+        <input type="number" id="reg2" min="0"><br><br>
+        <button id="enc2" style="font-size: 1vw;">Encrypt</button>
+        <div id="encryptionOutput2"></div><br><br><br><br><br><br><br>
+    </div>
+    <div class="section3">
+        <div id="mulcipher" style="width: 40vw; overflow-wrap:break-word;"></div><br>
+        <button id="dec" style="font-size: 1vw; position: relative; left: 43%;">Decrypt</button><br>
+        <div id="decryptionOutput"></div>
+    </div>   
+    <script src="../js/script2.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link href="../css/style1.css" rel="stylesheet">
+    <title>Paillier Cryptosystem UI</title>
+</head>
+<body>
+
+<div class="rectangle-bar"></div>
+<div class="container">
+    <div class="header">
+        <h1>Paillier Cryptosystem</h1>
+    </div>
+
+    <!-- Corrected centering of text -->
+    <h1 style="text-align: center;">Calculate here</h1>
+
+    <!-- Key Generation Section -->
+    <div class="section">
+        <button id="genkeys">Generate Keys</button>
+        <div id="keysOutput" class="output"></div>
+    </div>
+
+    <!-- Encryption Section -->
+    <div class="section">
+        <label for="plaintext">Enter Plaintext:</label>
+        <input type="text" id="plaintext" placeholder="Type your message...">
+        <button id="enc">Encrypt</button>
+        <div id="encryptionOutput" class="output"></div>
+    </div>
+
+    <!-- Decryption Section -->
+    <div class="section">
+        <label for="ciphertext">Enter Ciphertext:</label>
+        <input type="text" id="ciphertext" placeholder="Paste your ciphertext...">
+        <button id="dec">Decrypt</button>
+        <div id="decryptionOutput" class="output"></div>
+    </div>
+    <script src="../js/script.js"></script>
+</div>
+</body>
+</html>

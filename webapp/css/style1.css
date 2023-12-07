@@ -1,0 +1,106 @@
+/* Styles from the first code block */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+    background-image: url('../images/bg.jpg');
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.rectangle-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 120%; /* Increase the width to make the bar longer */
+    height: 10vh;
+    background-color: #fff; /* Change the color to white */
+}
+
+.container {
+    width: 70vw;
+    min-width: 300px;
+    margin: 0 auto;
+    height: 50vh;
+    overflow: auto;
+    padding-top: 41px; /* Add padding to accommodate the rectangle bar */
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 20px;
+}
+
+.header h1 {
+    font-size: 2rem;
+    color: #001858;
+    margin: 0;
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.tech {
+    flex-basis: 50%;
+}
+
+.design {
+    flex-basis: 50%;
+}
+
+.tech h2, .design h2 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.tech p, .design p {
+    text-align: center;
+}
+
+.footer {
+    text-align: center;
+}
+
+.footer a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Styles from the second code block */
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.section {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+input {
+    padding: 8px;
+    margin-top: 8px;
+}
+
+.output{
+    width: 70vw;
+    min-width: 300px;
+    overflow-wrap: break-word;
+}
