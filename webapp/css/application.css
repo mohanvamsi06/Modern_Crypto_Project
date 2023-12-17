@@ -63,6 +63,18 @@ body {
     padding: 2px 18px;
     color: #ffffff !important; /* Set the color of "FEEDBACK" to white */
 }
+
+.Go_back{
+    positon: absolute;
+    top: 35px;
+    right: 2vw;
+    background-color: #FCA61F;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
 .section1{
     
     position: absolute;
