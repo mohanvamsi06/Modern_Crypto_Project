@@ -67,7 +67,8 @@ body {
 .Go_back{
     positon: absolute;
     top: 35px;
-    right: 5vw;
+    right: 95px;
+    widhth: 60px;
     background-color: #FCA61F;
     color: white;
     border: none;
