@@ -65,10 +65,10 @@ body {
 }
 
 .Go_back{
-    positon: absolute;
+    position: absolute;
     top: 35px;
     right: 95px;
-    widhth: 60px;
+    width: 60px;
     background-color: #FCA61F;
     color: white;
     border: none;
