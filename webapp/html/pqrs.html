@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: white;
+            background-image: url('../images/bg.png');
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .rectangle-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 120%; /* Increase the width to make the bar longer */
+            height: 75px;
+            background-color: #fff; /* Change the color to white */
+        }
+
+        .navbar {
+            background-color: #ffffff;
+            color: #001858;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .navbar h1 {
+            font-size: 2rem;
+            margin: 0;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+            margin-right: 50px; /* Move the entire list to the left */
+        }
+
+        .nav-links li {
+            margin-left: 50px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #001858;
+            font-size: 1.1rem;
+        }
+
+        .feedback-button a {
+            border-radius: 5px;
+            background: #FCA61F;
+            padding: 2px 18px;
+            color: #ffffff !important; /* Set the color of "FEEDBACK" to white */
+        }
+
+        .container {
+            width: 800px;
+            margin: 70px auto 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            background-color: #fff; /* White box background color */
+            padding: 20px; /* Add padding */
+            border-radius: 8px; /* Add border radius */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow */
+        }
+
+        .header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 10px 20px;
+        }
+
+        .header {
+            padding: 10px 0;
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            margin: 0;
+        }
+
+        .section {
+            margin-top: 30px;
+            text-align: center;
+            width: 48%; /* Adjust the width as needed */
+            display: inline-block;
+        }
+
+        #encryptionOutput, #decryptionOutput {
+            margin-top: 20px; /* Add margin between the sections */
+        }
+
+        button {
+            padding: 10px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        input {
+            padding: 8px;
+            margin-top: 8px;
+            width: 80%;
+            box-sizing: border-box;
+        }
+
+        .Go_back{
+            position: absolute;
+            right: 75px;
+            width: 80px;
+            font-family: 'Poppins', sans-serif;
+            background-color: #FCA61F;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+    <title>Paillier Cryptosystem UI</title>
+</head>
+<body>
+
+<!-- Custom Navigation Bar -->
+<div class="navbar">
+    <h1>Paillier Cryptosystem</h1>
+    <button class="Go_back" onclick="window.location.href='../index.html'"><b>Go back</b></button>
+    </ul>
+</div>
+<div class="rectangle-bar"></div>
+    <div class="container">
+        <div class="header">
+            <h1>Paillier Cryptosystem</h1>
+        </div>
+
+        <!-- Box for prime p -->
+        <div class="section">
+            <label for="primeP"><b>Enter Prime p:</b></label>
+            <input type="text" id="primeP" placeholder="Enter prime p...">
+            <button onclick="generate('primeP')">Generate</button>
+        </div>
+
+        <!-- Box for prime q -->
+        <div class="section">
+            <label for="primeQ"><b>Enter Prime q:</b></label>
+            <input type="text" id="primeQ" placeholder="Enter prime q...">
+            <button onclick="generate('primeQ')">Generate</button>
+        </div>
+
+        <!-- Box for g -->
+        <div class="section">
+            <label for="generatorG"><b>Enter Generator g:</b></label>
+            <input type="text" id="generatorG" placeholder="Enter generator g...">
+            <button onclick="generate('generatorG')">Generate</button>
+        </div>
+
+        <!-- Box for r -->
+        <div class="section">
+            <label for="randomR"><b>Enter Random r:</b></label>
+            <input type="text" id="randomR" placeholder="Enter random r...">
+            <button onclick="generate('randomR')">Generate</button>
+        </div>
+
+        <!-- Encryption Section -->
+        <div class="section">
+            <label for="plaintext"><b>Enter Plaintext:</b></label>
+            <input type="text" id="plaintext" placeholder="Type your message...">
+            <button onclick="encrypt()">Encrypt</button>
+            <div id="encryptionOutput"></div>
+        </div>
+    
+        <!-- Decryption Section -->
+        <div class="section">
+            <label for="ciphertext"><b>Enter Ciphertext:</b></label>
+            <input type="text" id="ciphertext" placeholder="Paste your ciphertext...">
+            <button onclick="decrypt()">Decrypt</button>
+            <div id="decryptionOutput"></div>
+        </div>
+
+    </div>
+    
+
+    <script>
+        function generate(id) {
+            const inputValue = document.getElementById(id).value;
+            alert(`Value entered for ${id}: ${inputValue}`);
+            // You can perform additional actions here based on the entered value
+        }
+    </script>
+
+<script>
+    // Existing script for generate function
+
+    function encrypt() {
+        const plaintextValue = document.getElementById('plaintext').value;
+        alert(`Plaintext entered: ${plaintextValue}`);
+        // Perform encryption logic here
+    }
+
+    function decrypt() {
+        const ciphertextValue = document.getElementById('ciphertext').value;
+        alert(`Ciphertext entered: ${ciphertextValue}`);
+        // Perform decryption logic here
+    }
+</script>
+
+</body>
+</html>
