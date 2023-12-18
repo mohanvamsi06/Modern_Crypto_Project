@@ -1,0 +1,84 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+    background-image: url('../images/bg.jpg');
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.rectangle-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 120%; /* Increase the width to make the bar longer */
+    height: 75px;
+    background-color: #fff; /* Change the color to white */
+}
+
+.navbar {
+    background-color: #ffffff;
+    color: #001858;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar h1 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    margin-right: 50px; /* Move the entire list to the left */
+}
+
+.nav-links li {
+    margin-left: 50px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #001858;
+    font-size: 1.1rem;
+}
+
+.feedback-button a{
+    border-radius: 5px;
+    background: #FCA61F;
+    padding: 2px 18px;
+    color: #ffffff !important; /* Set the color of "FEEDBACK" to white */
+}
+
+.Go_back{
+    position: absolute;
+    right: 75px;
+    width: 80px;
+    background-color: #FCA61F;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.content{
+    height: 80%;
+    width: 90%;
+    overflow-x: hidden;
+    scrollbar-width: none;
+}
