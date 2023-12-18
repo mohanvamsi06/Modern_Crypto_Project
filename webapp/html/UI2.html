@@ -9,6 +9,7 @@
             font-family: 'Poppins', sans-serif;
             background-color: white;
             background-image: url('../images/bg.jpg');
+            background-size: cover;
             margin: 0;
             padding: 0;
             display: flex;
@@ -105,7 +106,14 @@
             display: inline-block;
         }
 
-        #encryptionOutput, #decryptionOutput {
+        .section1{
+            margin-top: 30px;
+            text-align: center;
+            width: 100%; /* Adjust the width as needed */
+            display: inline-block;
+        }
+
+        #encryptionOutput, #decryptionOutput, #keysOutput {
             margin-top: 20px; /* Add margin between the sections */
         }
 
@@ -154,36 +162,37 @@
         <!-- Box for prime p -->
         <div class="section">
             <label for="primeP"><b>Enter Prime p:</b></label>
-            <input type="text" id="primeP" placeholder="Enter prime p...">
-            <button onclick="generate('primeP')">Generate</button>
+            <input type="number" id="primeP" placeholder="Enter prime p...">
         </div>
 
         <!-- Box for prime q -->
         <div class="section">
             <label for="primeQ"><b>Enter Prime q:</b></label>
-            <input type="text" id="primeQ" placeholder="Enter prime q...">
-            <button onclick="generate('primeQ')">Generate</button>
+            <input type="number" id="primeQ" placeholder="Enter prime q...">
         </div>
 
         <!-- Box for g -->
         <div class="section">
             <label for="generatorG"><b>Enter Generator g:</b></label>
-            <input type="text" id="generatorG" placeholder="Enter generator g...">
-            <button onclick="generate('generatorG')">Generate</button>
+            <input type="number" id="generatorG" placeholder="Enter generator g...">
         </div>
 
         <!-- Box for r -->
         <div class="section">
             <label for="randomR"><b>Enter Random r:</b></label>
-            <input type="text" id="randomR" placeholder="Enter random r...">
-            <button onclick="generate('randomR')">Generate</button>
+            <input type="number" id="randomR" placeholder="Enter random r...">
+        </div>
+
+        <div class="section1">
+            <button id="genkeys">Enter</button>
+            <div id="keysOutput"></div>
         </div>
 
         <!-- Encryption Section -->
         <div class="section">
             <label for="plaintext"><b>Enter Plaintext:</b></label>
             <input type="text" id="plaintext" placeholder="Type your message...">
-            <button onclick="encrypt()">Encrypt</button>
+            <button id="enc">Encrypt</button>
             <div id="encryptionOutput"></div>
         </div>
     
@@ -191,36 +200,12 @@
         <div class="section">
             <label for="ciphertext"><b>Enter Ciphertext:</b></label>
             <input type="text" id="ciphertext" placeholder="Paste your ciphertext...">
-            <button onclick="decrypt()">Decrypt</button>
+            <button id="dec">Decrypt</button>
             <div id="decryptionOutput"></div>
         </div>
 
     </div>
+    <script src="../js/script3.js"></script>
     
-
-    <script>
-        function generate(id) {
-            const inputValue = document.getElementById(id).value;
-            alert(`Value entered for ${id}: ${inputValue}`);
-            // You can perform additional actions here based on the entered value
-        }
-    </script>
-
-<script>
-    // Existing script for generate function
-
-    function encrypt() {
-        const plaintextValue = document.getElementById('plaintext').value;
-        alert(`Plaintext entered: ${plaintextValue}`);
-        // Perform encryption logic here
-    }
-
-    function decrypt() {
-        const ciphertextValue = document.getElementById('ciphertext').value;
-        alert(`Ciphertext entered: ${ciphertextValue}`);
-        // Perform decryption logic here
-    }
-</script>
-
 </body>
 </html>
