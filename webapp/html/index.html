@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: white;
+            background-image: url('../images/bg.png');
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .rectangle-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 120%; 
+            height: 75px;
+            background-color: #fff; 
+        }
+
+        .subscript {
+            font-size: 0.7em;
+            vertical-align: sub;
+            width: 48px;
+            height: 20px;
+            color: var(--Blue, #6246EA);
+            font-family: Poppins;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: bold;
+            line-height: normal;
+        }
+
+        .navbar {
+            background-color: #ffffff;
+            color: #001858;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .navbar h1 {
+            font-size: 2rem;
+            margin: 0;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+            margin-right: 50px; 
+        }
+
+        .nav-links li {
+            margin-left: 50px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #001858;
+            font-size: 1.1rem;
+        }
+
+        .feedback-button a{
+            border-radius: 5px;
+            background: #FCA61F;
+            padding: 2px 18px;
+            color: #ffffff !important; 
+        }
+
+        .container {
+            width: 800px;
+            margin: 70px auto 0;
+        }
+
+        .header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 10px 20px;
+        }
+
+        .header {
+            padding: 10px 0;
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .section {
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        input {
+            padding: 8px;
+            margin-top: 8px;
+        }
+    </style>
+    <title>Paillier Cryptosystem UI</title>
+</head>
+<body>
+
+<!-- Custom Navigation Bar -->
+<div class="navbar">
+    <h1>Paillier Cryptosystem <span class="subscript"><b>.in</b></span></h1>
+    <ul class="nav-links">
+        <li><a href="../html/pqrs.html"><b>Encrypt/Decrypt<br><span style="font-size: 0.6em; text-align: center;">(manual)</span></b></a></li>
+        <li><a href="../html/application.html"><b>Application</b></a></li>
+        <li><a href="../html/user_manual.html"><b>User-manual</b></a></li>
+        <li class="feedback-button"><a href="../html/aboutpage.html"><b>About.</b></a></li>
+    </ul>
+</div>
+<div class="rectangle-bar"></div>
+    <div class="container">
+        <div class="header">
+            <h1>Paillier Cryptosystem</h1>
+        </div>
+
+        <!-- Corrected centering of text -->
+        <h1 style="text-align: center;">Calculate here</h1>
+
+        <!-- Key Generation Section -->
+        <div class="section">
+            <button onclick="generateKeys()">Generate Keys</button>
+            <div id="keysOutput"></div>
+        </div>
+
+        <!-- Encryption Section -->
+        <div class="section">
+            <label for="plaintext">Enter Plaintext:</label>
+            <input type="text" id="plaintext" placeholder="Type your message...">
+            <button onclick="encrypt()">Encrypt</button>
+            <div id="encryptionOutput"></div>
+        </div>
+
+        <!-- Decryption Section -->
+        <div class="section">
+            <label for="ciphertext">Enter Ciphertext:</label>
+            <input type="text" id="ciphertext" placeholder="Paste your ciphertext...">
+            <button onclick="decrypt()">Decrypt</button>
+            <div id="decryptionOutput"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
